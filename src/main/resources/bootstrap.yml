@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: registrator
+  cloud:
+    zookeeper:
+      enabled: true
+
+      discovery:
+        enabled: true
+        register: true
+        instance-host: localhost
+        instance-port: 2181
+        #root: /services
+      connect-string: localhost:2181
+
+
+endpoints:
+  metrics:
+    sensitive: false
+    enabled: true
